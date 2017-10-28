@@ -41,6 +41,7 @@ import org.pitest.mutationtest.engine.gregor.mutators.MathMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.NonVoidMethodCallMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.OBBNMutator;
+import org.pitest.mutationtest.engine.gregor.mutators.RORMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator.Choice;
 import org.pitest.mutationtest.engine.gregor.mutators.ReturnValsMutator;
@@ -150,7 +151,9 @@ public final class Mutator {
          */
         add("EXPERIMENTAL_NAKED_RECEIVER", NakedReceiverMutator.NAKED_RECEIVER);
 
+        /* new mutators add here */
         add("OBBN", OBBNMutator.OBBN_MUTATOR);
+        add("ROR", RORMutator.ROR_MUTATOR);
 
         addGroup("REMOVE_SWITCH", RemoveSwitchMutator.makeMutators());
         addGroup("DEFAULTS", defaults());
