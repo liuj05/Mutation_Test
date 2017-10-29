@@ -31,6 +31,7 @@ import org.pitest.functional.prelude.Prelude;
 import org.pitest.help.Help;
 import org.pitest.help.PitHelpError;
 import org.pitest.mutationtest.engine.gregor.MethodMutatorFactory;
+import org.pitest.mutationtest.engine.gregor.mutators.AODMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.ArgumentPropagationMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.ConstructorCallMutator;
@@ -154,6 +155,7 @@ public final class Mutator {
         /* new mutators add here */
         add("OBBN", OBBNMutator.OBBN_MUTATOR);
         add("ROR", RORMutator.ROR_MUTATOR);
+        add("AOD", AODMutator.AOD_MUTATOR);
 
         addGroup("REMOVE_SWITCH", RemoveSwitchMutator.makeMutators());
         addGroup("DEFAULTS", defaults());
