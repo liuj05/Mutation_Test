@@ -9,7 +9,7 @@ Implementation Goals:
 
 - [x] ROR: Replaces the relational operators with another one. It applies every replacement. 
 
-- [ ] AOR: Replaces an arithmetic expression by another one.
+- [x] AOR: Replaces an arithmetic expression by another one.
 
 - [ ] UOI: Replaces a variable with a unary operator or removes an instance of an unary operator.
 
