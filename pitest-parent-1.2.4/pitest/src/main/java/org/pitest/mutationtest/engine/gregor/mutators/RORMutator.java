@@ -36,10 +36,10 @@ class RORMethodVisitor extends AbstractJumpMutator {
     private static final Map<Integer, Substitution> MUTATIONS = new HashMap<Integer, Substitution>();
 
     static {
-        MUTATIONS.put(Opcodes.IFLT, new Substitution(Opcodes.IFGE, "Replace < with >="));
-        MUTATIONS.put(Opcodes.IFGT, new Substitution(Opcodes.IFLE, "Replace > with <="));
-        MUTATIONS.put(Opcodes.IFGE, new Substitution(Opcodes.IFLT, "Replace >= with <"));
-        MUTATIONS.put(Opcodes.IFLE, new Substitution(Opcodes.IFGT, "Replace <= with >"));
+        MUTATIONS.put(Opcodes.IF_ICMPLT, new Substitution(Opcodes.IF_ICMPGE, "Replace >= with <"));
+        MUTATIONS.put(Opcodes.IF_ICMPGT, new Substitution(Opcodes.IF_ICMPLE, "Replace <= with >"));
+        MUTATIONS.put(Opcodes.IF_ICMPGE, new Substitution(Opcodes.IF_ICMPLT, "Replace < with >="));
+        MUTATIONS.put(Opcodes.IF_ICMPLE, new Substitution(Opcodes.IF_ICMPGT, "Replace > with <="));
     }
 
     RORMethodVisitor(final MethodMutatorFactory factory, final MutationContext context,
