@@ -47,6 +47,7 @@ import org.pitest.mutationtest.engine.gregor.mutators.RORMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator.Choice;
 import org.pitest.mutationtest.engine.gregor.mutators.ReturnValsMutator;
+import org.pitest.mutationtest.engine.gregor.mutators.UOIMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.experimental.NakedReceiverMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.experimental.RemoveIncrementsMutator;
@@ -158,7 +159,8 @@ public final class Mutator {
         add("ROR", RORMutator.ROR_MUTATOR);
         add("AOD", AODMutator.AOD_MUTATOR);
         add("AOR", AORMutator.AOR_MUTATOR);
-
+        add("UOI", UOIMutator.UOI_MUTATOR);
+        
         addGroup("REMOVE_SWITCH", RemoveSwitchMutator.makeMutators());
         addGroup("DEFAULTS", defaults());
         addGroup("STRONGER", stronger());
