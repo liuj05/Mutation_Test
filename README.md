@@ -19,3 +19,10 @@ Test Projects:
 
 - https://github.com/gaul/are-we-consistent-yet
 
+- https://github.com/talios/clojure-maven-plugin
+
+- https://github.com/jiecao-fm/hashids-java
+
+- https://github.com/giltene/PauselessHashMap
+
+- https://github.com/spotify/trickle
