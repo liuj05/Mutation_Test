@@ -14,3 +14,8 @@ Implementation Goals:
 - [x] UOI: Replaces a variable with a unary operator or removes an instance of an unary operator.
 
 - [x] CRCR: Replaces a constant a with its negation, or with 1, 0, a + 1, a – 1.
+
+Test Projects:
+
+- 1. https://github.com/gaul/are-we-consistent-yet
+
