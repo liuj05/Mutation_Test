@@ -17,5 +17,5 @@ Implementation Goals:
 
 Test Projects:
 
-- 1. https://github.com/gaul/are-we-consistent-yet
+- https://github.com/gaul/are-we-consistent-yet
 
