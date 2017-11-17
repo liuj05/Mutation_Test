@@ -31,10 +31,10 @@ import org.pitest.functional.prelude.Prelude;
 import org.pitest.help.Help;
 import org.pitest.help.PitHelpError;
 import org.pitest.mutationtest.engine.gregor.MethodMutatorFactory;
-import org.pitest.mutationtest.engine.gregor.mutators.ABSMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.AODMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.AORMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.ArgumentPropagationMutator;
+import org.pitest.mutationtest.engine.gregor.mutators.CRCRMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.ConstructorCallMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.IncrementsMutator;
@@ -161,8 +161,10 @@ public final class Mutator {
         add("AOD", AODMutator.AOD_MUTATOR);
         add("AOR", AORMutator.AOR_MUTATOR);
         add("UOI", UOIMutator.UOI_MUTATOR);
-        add("ABS", ABSMutator.ABS_Mutator);
-
+        
+        
+        add("CRCR", new CRCRMutator());
+        
         addGroup("REMOVE_SWITCH", RemoveSwitchMutator.makeMutators());
         addGroup("DEFAULTS", defaults());
         addGroup("STRONGER", stronger());
