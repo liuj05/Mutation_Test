@@ -33,6 +33,7 @@ import org.pitest.help.PitHelpError;
 import org.pitest.mutationtest.engine.gregor.MethodMutatorFactory;
 import org.pitest.mutationtest.engine.gregor.mutators.ABSMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.AODMutator;
+import org.pitest.mutationtest.engine.gregor.mutators.AODMutatorSecond;
 import org.pitest.mutationtest.engine.gregor.mutators.AORMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.ArgumentPropagationMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.CRCRMutator;
@@ -160,6 +161,7 @@ public final class Mutator {
         add("OBBN", OBBNMutator.OBBN_MUTATOR);
         add("ROR", RORMutator.ROR_MUTATOR);
         add("AOD", AODMutator.AOD_MUTATOR);
+        add("AOD2", AODMutatorSecond.AOD_MUTATOR_2);
         add("AOR", AORMutator.AOR_MUTATOR);
         add("UOI", UOIMutator.UOI_MUTATOR);
         add("ABS", ABSMutator.ABS_Mutator);
