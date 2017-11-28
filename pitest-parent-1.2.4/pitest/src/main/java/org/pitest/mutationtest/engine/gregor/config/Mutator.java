@@ -32,6 +32,7 @@ import org.pitest.help.Help;
 import org.pitest.help.PitHelpError;
 import org.pitest.mutationtest.engine.gregor.MethodMutatorFactory;
 import org.pitest.mutationtest.engine.gregor.mutators.ABSMutator;
+import org.pitest.mutationtest.engine.gregor.mutators.ANDMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.AODMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.AODMutatorSecond;
 import org.pitest.mutationtest.engine.gregor.mutators.AORMutator;
@@ -46,6 +47,9 @@ import org.pitest.mutationtest.engine.gregor.mutators.MathMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.NonVoidMethodCallMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.OBBNMutator;
+import org.pitest.mutationtest.engine.gregor.mutators.OSBNMutatorAND;
+import org.pitest.mutationtest.engine.gregor.mutators.OSBNMutatorOR;
+import org.pitest.mutationtest.engine.gregor.mutators.OSBNMutatorXOR;
 import org.pitest.mutationtest.engine.gregor.mutators.RORMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator.Choice;
@@ -166,6 +170,10 @@ public final class Mutator {
         add("UOI", UOIMutator.UOI_MUTATOR);
         add("ABS", ABSMutator.ABS_Mutator);
         add("CRCR", new CRCRMutator());
+        add("OSBN_AND", OSBNMutatorAND.OSBN_MUTATOR_AND);
+        add("OSBN_OR", OSBNMutatorOR.OSBN_MUTATOR_OR);
+        add("OSBN_XOR", OSBNMutatorXOR.OSBN_MUTATOR_XOR);
+        add("AND", ANDMutator.ARGUMENT_NUMBER_DECREASE_MUTATOR);
 
         addGroup("REMOVE_SWITCH", RemoveSwitchMutator.makeMutators());
         addGroup("DEFAULTS", defaults());
