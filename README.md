@@ -15,6 +15,10 @@ Implementation Goals:
 
 - [x] CRCR: Replaces a constant a with its negation, or with 1, 0, a + 1, a – 1.
 
+- [x] OSBN: Replaces a shift operator with bitwise operators.
+
+- [x] AND: Remove two arguments in methods.
+
 Test Projects:
 
 - https://github.com/gaul/are-we-consistent-yet
