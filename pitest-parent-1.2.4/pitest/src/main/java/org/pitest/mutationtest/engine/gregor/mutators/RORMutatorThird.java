@@ -10,14 +10,13 @@ import org.pitest.mutationtest.engine.gregor.MethodInfo;
 import org.pitest.mutationtest.engine.gregor.MethodMutatorFactory;
 import org.pitest.mutationtest.engine.gregor.MutationContext;
 
-public enum RORMutator implements MethodMutatorFactory {
-
-    ROR_MUTATOR_GT;
+public enum RORMutatorThird implements MethodMutatorFactory {
+    ROR_MUTATOR_LT;
 
     @Override
     public MethodVisitor create(final MutationContext context, final MethodInfo methodInfo,
             final MethodVisitor methodVisitor) {
-        return new RORMethodVisitor(this, context, methodVisitor);
+        return new ROR3MethodVisitor(this, context, methodVisitor);
     }
 
     @Override
@@ -31,20 +30,20 @@ public enum RORMutator implements MethodMutatorFactory {
     }
 }
 
-class RORMethodVisitor extends AbstractJumpMutator {
+class ROR3MethodVisitor extends AbstractJumpMutator {
 
-    private static final String                     DESCRIPTION = "changed relational operators with >";
+    private static final String                     DESCRIPTION = "changed relational operators with <";
     private static final Map<Integer, Substitution> MUTATIONS = new HashMap<Integer, Substitution>();
 
     static {
-        MUTATIONS.put(Opcodes.IF_ICMPLT, new Substitution(Opcodes.IF_ICMPGT, DESCRIPTION));
-        MUTATIONS.put(Opcodes.IF_ICMPGE, new Substitution(Opcodes.IF_ICMPGT, DESCRIPTION));
-        MUTATIONS.put(Opcodes.IF_ICMPLE, new Substitution(Opcodes.IF_ICMPGT, DESCRIPTION));
-        MUTATIONS.put(Opcodes.IF_ICMPEQ, new Substitution(Opcodes.IF_ICMPGT, DESCRIPTION));
-        MUTATIONS.put(Opcodes.IF_ICMPNE, new Substitution(Opcodes.IF_ICMPGT, DESCRIPTION));
+        MUTATIONS.put(Opcodes.IF_ICMPGE, new Substitution(Opcodes.IF_ICMPLT, DESCRIPTION));
+        MUTATIONS.put(Opcodes.IF_ICMPGT, new Substitution(Opcodes.IF_ICMPLT, DESCRIPTION));
+        MUTATIONS.put(Opcodes.IF_ICMPLE, new Substitution(Opcodes.IF_ICMPLT, DESCRIPTION));
+        MUTATIONS.put(Opcodes.IF_ICMPEQ, new Substitution(Opcodes.IF_ICMPLT, DESCRIPTION));
+        MUTATIONS.put(Opcodes.IF_ICMPNE, new Substitution(Opcodes.IF_ICMPLT, DESCRIPTION));
     }
 
-    RORMethodVisitor(final MethodMutatorFactory factory, final MutationContext context,
+    ROR3MethodVisitor(final MethodMutatorFactory factory, final MutationContext context,
             final MethodVisitor delegateMethodVisitor) {
         super(factory, context, delegateMethodVisitor);
     }

@@ -51,6 +51,11 @@ import org.pitest.mutationtest.engine.gregor.mutators.OSBNMutatorAND;
 import org.pitest.mutationtest.engine.gregor.mutators.OSBNMutatorOR;
 import org.pitest.mutationtest.engine.gregor.mutators.OSBNMutatorXOR;
 import org.pitest.mutationtest.engine.gregor.mutators.RORMutator;
+import org.pitest.mutationtest.engine.gregor.mutators.RORMutatorFifth;
+import org.pitest.mutationtest.engine.gregor.mutators.RORMutatorFourth;
+import org.pitest.mutationtest.engine.gregor.mutators.RORMutatorSecond;
+import org.pitest.mutationtest.engine.gregor.mutators.RORMutatorSixth;
+import org.pitest.mutationtest.engine.gregor.mutators.RORMutatorThird;
 import org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator.Choice;
 import org.pitest.mutationtest.engine.gregor.mutators.ReturnValsMutator;
@@ -163,9 +168,14 @@ public final class Mutator {
 
         /* new mutators add here */
         add("OBBN", OBBNMutator.OBBN_MUTATOR);
-        add("ROR", RORMutator.ROR_MUTATOR);
         add("AOD", AODMutator.AOD_MUTATOR);
         add("AOD2", AODMutatorSecond.AOD_MUTATOR_2);
+        add("ROR_GT", RORMutator.ROR_MUTATOR_GT);
+        add("ROR_GE", RORMutatorSecond.ROR_MUTATOR_GE);
+        add("ROR_LT", RORMutatorThird.ROR_MUTATOR_LT);
+        add("ROR_LE", RORMutatorFourth.ROR_MUTATOR_LE);
+        add("ROR_EQ", RORMutatorFifth.ROR_MUTATOR_EQ);
+        add("ROR_NE", RORMutatorSixth.ROR_MUTATOR_NE);
         add("AOR", AORMutator.AOR_MUTATOR);
         add("UOI", UOIMutator.UOI_MUTATOR);
         add("ABS", ABSMutator.ABS_Mutator);
