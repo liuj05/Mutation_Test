@@ -22,6 +22,11 @@
     	<configuration>
         	<mutators>
         		<mutator>CRCR</mutator>
+        		<mutator>CRCR_MUTATOR_ToOne</mutator>
+        		<mutator>CRCR_MUTATOR_ToZero</mutator>
+        		<mutator>CRCR_MUTATOR_ToNegation</mutator>
+        		<mutator>CRCR_MUTATOR_ToIncrement</mutator>
+        		<mutator>CRCR_MUTATOR_ToDecrement</mutator>
     		</mutators>
     	</configuration>
  	  </plugin>
