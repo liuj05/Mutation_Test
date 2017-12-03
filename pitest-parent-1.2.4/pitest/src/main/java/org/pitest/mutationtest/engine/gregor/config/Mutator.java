@@ -38,6 +38,11 @@ import org.pitest.mutationtest.engine.gregor.mutators.AODMutatorSecond;
 import org.pitest.mutationtest.engine.gregor.mutators.AORMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.ArgumentPropagationMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.CRCRMutator;
+import org.pitest.mutationtest.engine.gregor.mutators.CRCRMutatorToDecrement;
+import org.pitest.mutationtest.engine.gregor.mutators.CRCRMutatorToIncrement;
+import org.pitest.mutationtest.engine.gregor.mutators.CRCRMutatorToNegation;
+import org.pitest.mutationtest.engine.gregor.mutators.CRCRMutatorToOne;
+import org.pitest.mutationtest.engine.gregor.mutators.CRCRMutatorToZero;
 import org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.ConstructorCallMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.IncrementsMutator;
@@ -180,6 +185,12 @@ public final class Mutator {
         add("UOI", UOIMutator.UOI_MUTATOR);
         add("ABS", ABSMutator.ABS_Mutator);
         add("CRCR", new CRCRMutator());
+        add("CRCR_MUTATOR_ToDecrement", new CRCRMutatorToDecrement());
+        add("CRCR_MUTATOR_ToIncrement", new CRCRMutatorToIncrement());
+        add("CRCR_MUTATOR_ToOne", new CRCRMutatorToOne());
+        add("CRCR_MUTATOR_ToZero", new CRCRMutatorToZero());
+        add("CRCR_MUTATOR_ToNegation", new CRCRMutatorToNegation());
+        
         add("OSBN_AND", OSBNMutatorAND.OSBN_MUTATOR_AND);
         add("OSBN_OR", OSBNMutatorOR.OSBN_MUTATOR_OR);
         add("OSBN_XOR", OSBNMutatorXOR.OSBN_MUTATOR_XOR);
