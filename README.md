@@ -1,6 +1,8 @@
 # PITEST Mutation_Test
 
-To Install PITEST Mutation Testing:
+### Instructions:
+
+- To Install PITEST Mutation Testing:
 
 1. Clone the repository. 
 
@@ -8,7 +10,7 @@ To Install PITEST Mutation Testing:
 
 3. Use command "mvn clean install -DskipTests=true".
 
-To Apply PITEST Mutation Testing on Projects (Maven Projects):
+- To Apply PITEST Mutation Testing on Projects (Maven Projects):
 
 1. Open pom.xml file, and add plugin as following:
 
@@ -46,7 +48,13 @@ To Apply PITEST Mutation Testing on Projects (Maven Projects):
       </plugin>
   ```
 
-Implementation Goals:
+2. Enter the directory of project floder from comand line.
+
+3. Apply command "mvn clean test org.pitest:pitest-maven:mutationCoverage" (must clean test first) to run PITEST.
+
+4. The report in "project directory\target\pit-reports\"
+
+### Implementation Goals:
 
 - [x] ABS: Replaces a variable by its negation.
 
@@ -66,7 +74,7 @@ Implementation Goals:
 
 - [x] AND: Remove two arguments in methods.
 
-Test Projects:
+### Test Projects:
 
 - https://github.com/gaul/are-we-consistent-yet
 
