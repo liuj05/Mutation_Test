@@ -8,7 +8,7 @@
 
   2. Enter the directory of "pitest-parent-1.2.4" floder from comand line. 
 
-  3. Use command "mvn clean install -DskipTests=true" to install PITEST into local repository.
+  3. Use command "mvn clean install -DskipTests=true" to install PITEST locally.
 
 - To Apply PITEST Mutation Testing on Projects (Maven Projects):
 
