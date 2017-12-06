@@ -1,4 +1,51 @@
-# Mutation_Test
+# PITEST Mutation_Test
+
+To Install PITEST Mutation Testing:
+
+1. Clone the repository. 
+
+2. Enter the directory of "pitest-parent-1.2.4" floder from comand line. 
+
+3. Use command "mvn clean install -DskipTests=true".
+
+To Apply PITEST Mutation Testing on Projects (Maven Projects):
+
+1. Open pom.xml file, and add plugin as following:
+
+  ```xml
+  <plugin>
+      	<groupId>org.pitest</groupId>
+      	<artifactId>pitest-maven</artifactId>
+      	<version>1.2.4</version>
+      	<configuration>
+        	<mutators>
+        		<mutator>ABS</mutator>
+        		<mutator>OBBN</mutator>
+        		<mutator>AOD</mutator>
+        		<mutator>AOD2</mutator>
+        		<mutator>ROR_GT</mutator>
+        		<mutator>ROR_GE</mutator>
+        		<mutator>ROR_LT</mutator>
+        		<mutator>ROR_LE</mutator>
+        		<mutator>ROR_EQ</mutator>
+        		<mutator>ROR_NE</mutator>
+        		<mutator>AOR</mutator>
+        		<mutator>UOI</mutator>
+        		<mutator>CRCR</mutator>
+        		<mutator>CRCR_MUTATOR_ToDecrement</mutator>
+        		<mutator>CRCR_MUTATOR_ToIncrement</mutator>
+        		<mutator>CRCR_MUTATOR_ToOne</mutator>
+        		<mutator>CRCR_MUTATOR_ToZero</mutator>
+        		<mutator>CRCR_MUTATOR_ToNegation</mutator>
+        		<mutator>OSBN_AND</mutator>
+        		<mutator>OSBN_OR</mutator>
+        		<mutator>OSBN_XOR</mutator>
+        		<mutator>AND</mutator>
+    		</mutators>
+    	</configuration>
+      </plugin>
+  ```
+
 Implementation Goals:
 
 - [x] ABS: Replaces a variable by its negation.
