@@ -4,15 +4,15 @@
 
 - To Install PITEST Mutation Testing:
 
-1. Clone the repository. 
+  1. Clone the repository. 
 
-2. Enter the directory of "pitest-parent-1.2.4" floder from comand line. 
+  2. Enter the directory of "pitest-parent-1.2.4" floder from comand line. 
 
-3. Use command "mvn clean install -DskipTests=true".
+  3. Use command "mvn clean install -DskipTests=true".
 
 - To Apply PITEST Mutation Testing on Projects (Maven Projects):
 
-1. Open pom.xml file, and add plugin as following:
+  1. Open pom.xml file, and add plugin as following:
 
   ```xml
   <plugin>
@@ -48,11 +48,11 @@
       </plugin>
   ```
 
-2. Enter the directory of project floder from comand line.
+  2. Enter the directory of project floder from comand line.
 
-3. Apply command "mvn clean test org.pitest:pitest-maven:mutationCoverage" (must clean test first) to run PITEST.
+  3. Apply command "mvn clean test org.pitest:pitest-maven:mutationCoverage" (must clean test first) to run PITEST.
 
-4. The report in "project directory\target\pit-reports\"
+  4. The report in "project directory\target\pit-reports\"
 
 ### Implementation Goals:
 
